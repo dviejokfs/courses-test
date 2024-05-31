@@ -1,0 +1,84 @@
+# BBS signatures33
+
+BBS signatures are a type of cryptographic proof that play a pivotal role in the realm of Self-Sovereign Identity (SSI). They are a part of the larger family of Zero-Knowledge Proofs (ZKP), which allow one party to prove to another that they know a value, without conveying any information apart from the fact that they know the value.
+
+In the context of SSI, BBS signatures enable Selective Disclosure (SD), a crucial feature that drastically enhances privacy and user control. SD allows an individual to selectively share parts of their identity information without revealing the entirety of it. For instance, if an individual is required to prove that they are above a certain age, with SD they can do so without revealing their exact birth date.
+
+This selective sharing of information is made possible by the unique properties of BBS signatures. They enable the creation of a proof that is verifiable against the original signature, even when only a subset of the original data is disclosed. This is an essential characteristic for maintaining privacy in the digital world, making BBS signatures a key component in the SSI infrastructure.
+
+## Example
+
+Imagine we have a long message, for example, my full name: “David Viejo Pomata”.
+
+I signed that message, and I signed that my name is valid.
+
+But imagine someone else wants to verify that I signed my name without revealing my first and last names. They want to know if I signed that my name is David.
+
+BBS signatures provide this functionality.11
+
+- XMLDocument
+
+```tsx
+import {
+	generateBls12381G2KeyPair,
+	blsSign,
+	blsVerify,
+	blsCreateProof,
+	blsVerifyProof,
+} from "@mattrglobal/node-bbs-signatures";
+
+//Generate a new key pair
+const keyPair = await generateBls12381G2KeyPair();
+
+//Set of messages we wish to sign
+const messages = [Uint8Array.from(Buffer.from("david", "utf-8")), Uint8Array.from(Buffer.from("viejo", "utf-8")), Uint8Array.from(Buffer.from("pomata", "utf-8"))];
+
+//Create the signature
+const signature = await blsSign({
+	keyPair,
+	messages: messages,
+});
+
+//Verify the signature
+const isVerified = await blsVerify({
+	publicKey: keyPair.publicKey,
+	messages: messages,
+	signature,
+});
+console.log("Signature is verified:", isVerified);
+
+//Derive a proof from the signature revealing the first message
+const proof = await blsCreateProof({
+	signature,
+	publicKey: keyPair.publicKey,
+	messages,
+	nonce: Uint8Array.from(Buffer.from("nonce", "utf8")),
+	revealed: [0],
+});
+console.log("Proof created:", proof);
+
+//Verify the created proof
+const isProofVerified = await blsVerifyProof({
+	proof,
+	publicKey: keyPair.publicKey,
+	messages: [messages[0]],
+	nonce: Uint8Array.from(Buffer.from("nonce", "utf8")),
+});
+
+console.log("Proof is verified:", Buffer.from(messages[0]).toString("utf-8"), isProofVerified);
+
+```
+
+Some technical aspects:
+
+- BLS key pairs are used to produce a BBS signature
+- The holder creates the signature, others can derive the proof using the signature and the public key.
+- Once the proof is derived, anyone can verify it having:
+    - Nonce
+    - Public Key
+    - Message to verify
+    - Derived proof
+
+
+
+<Project id="project_01" />

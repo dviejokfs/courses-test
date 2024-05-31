@@ -1,0 +1,7 @@
+test:
+  - bun test
+
+
+services:
+  - type: postgresql
+

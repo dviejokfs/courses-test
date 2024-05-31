@@ -1,0 +1,33 @@
+title: SSI Course
+description: This course is designed to teach you how to use SSI to manage identities
+
+
+projects:
+  - path: ./projects/project_01
+    title: Practice Bun
+    id: project_01
+    description: This project helps you learn the basics of BUN
+
+chapters:
+    - title: Introduction
+      description: This chapter introduces you to the course
+      lessons:
+          - title: Welcome to the course
+            description: This lesson welcomes you to the course
+            path: 01_ssi/01_SSI_INTRO.mdx
+          - title: SSI Concepts
+            description: This lesson introduces you to the concepts of SSI
+            path: 01_ssi/02_SSI_CONCEPTS.mdx
+          - title: SSI Issuer
+            description: This lesson introduces you to the concept of SSI Issuer
+            path: 01_ssi/03_SSI_ISSUER.mdx
+    - title: Getting Started
+      description: This chapter helps you get started with SSI
+      lessons: []
+      # lessons:
+      #     - title: Setting up your SSI wallet
+      #       description: This lesson helps you set up your SSI wallet
+      #       path: 02_getting_started/01_SSI_WALLET.mdx
+      #     - title: Creating your first credential
+      #       description: This lesson helps you create your first credential
+      #       path: 02_getting_started/02_CREATE_CREDENTIAL.mdx
