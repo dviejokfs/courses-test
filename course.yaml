@@ -1,27 +1,33 @@
 title: SSI Course
+slug: ssi-course
 description: This course is designed to teach you how to use SSI to manage identities
 
 
 projects:
-  - path: ./projects/project_01
-    title: Practice Bun
-    id: project_01
+  - title: Practice Bun
     description: This project helps you learn the basics of BUN
+    path: ./projects/project_01
+    slug: get-started-with-bun
 
 chapters:
     - title: Introduction
+      slug: introduction
       description: This chapter introduces you to the course
       lessons:
           - title: Welcome to the course
+            slug: welcome-to-the-course
             description: This lesson welcomes you to the course
             path: 01_ssi/01_SSI_INTRO.mdx
           - title: SSI Concepts
+            slug: ssi-concepts
             description: This lesson introduces you to the concepts of SSI
             path: 01_ssi/02_SSI_CONCEPTS.mdx
           - title: SSI Issuer
+            slug: ssi-issuer
             description: This lesson introduces you to the concept of SSI Issuer
             path: 01_ssi/03_SSI_ISSUER.mdx
     - title: Getting Started
+      slug: getting-started
       description: This chapter helps you get started with SSI
       lessons: []
       # lessons:

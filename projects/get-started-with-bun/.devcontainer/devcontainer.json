@@ -8,6 +8,7 @@
 	"mounts": [
 		"source=${localWorkspaceFolder},target=/home/student/project_01,type=bind,consistency=cached"
 	],
+	"runServices": [],
 	"workspaceFolder": "/home/student/project_01",
 	"shutdownAction": "stopCompose"
 }

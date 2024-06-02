@@ -31,4 +31,5 @@ RUN bun --version
 # SHELL ["/bin/zsh", "-c"]
 
 # Set the command to be run when the container starts
-CMD ["sleep", "infinity"]
+# CMD ["sleep", "infinity"]
+CMD while sleep 120 && ps aux | egrep 'vscode.*[b]ootstrap-fork.*extensionHost.*' > /dev/null; do :; done
