@@ -26,6 +26,11 @@ chapters:
             slug: ssi-issuer
             description: This lesson introduces you to the concept of SSI Issuer
             path: 01_ssi/03_SSI_ISSUER.mdx
+          - title: SSI Verifier
+            slug: ssi-verifier
+            description: This lesson introduces you to the concept of SSI Verifier
+            path: 01_ssi/04_SSI_VERIFIER.mdx
+
     - title: Getting Started
       slug: getting-started
       description: This chapter helps you get started with SSI
