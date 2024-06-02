@@ -6,7 +6,7 @@ description: This course is designed to teach you how to use SSI to manage ident
 projects:
   - title: Practice Bun
     description: This project helps you learn the basics of BUN
-    path: ./projects/project_01
+    path: ./projects/get-started-with-bun
     slug: get-started-with-bun
 
 chapters:
