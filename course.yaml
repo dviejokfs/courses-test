@@ -14,14 +14,15 @@ chapters:
       slug: introduction
       description: This chapter introduces you to the course
       lessons:
-          - title: Welcome to the course
-            slug: welcome-to-the-course
-            description: This lesson welcomes you to the course
-            path: 01_ssi/01_SSI_INTRO.mdx
           - title: SSI Concepts
             slug: ssi-concepts
             description: This lesson introduces you to the concepts of SSI
             path: 01_ssi/02_SSI_CONCEPTS.mdx
+          - title: Welcome to the course
+            slug: welcome-to-the-course
+            description: This lesson welcomes you to the course
+            path: 01_ssi/01_SSI_INTRO.mdx
+
           - title: SSI Issuer
             slug: ssi-issuer
             description: This lesson introduces you to the concept of SSI Issuer
