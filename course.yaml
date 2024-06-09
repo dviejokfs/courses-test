@@ -10,6 +10,29 @@ projects:
     slug: get-started-with-bun
 
 chapters:
+
+    - title: Getting Started
+      slug: getting-started
+      description: This chapter helps you get started with SSI
+      lessons:
+          - title: SSI Concepts
+            slug: ssi-concepts
+            description: This lesson introduces you to the concepts of SSI
+            path: 01_ssi/02_SSI_CONCEPTS.mdx
+          - title: Welcome to the course
+            slug: welcome-to-the-course
+            description: This lesson welcomes you to the course
+            path: 01_ssi/01_SSI_INTRO.mdx
+
+          - title: SSI Issuer
+            slug: ssi-issuer
+            description: This lesson introduces you to the concept of SSI Issuer
+            path: 01_ssi/03_SSI_ISSUER.mdx
+          - title: SSI Verifier
+            slug: ssi-verifier
+            description: This lesson introduces you to the concept of SSI Verifier
+            path: 01_ssi/04_SSI_VERIFIER.mdx
+
     - title: Introduction
       slug: introduction
       description: This chapter introduces you to the course
@@ -31,15 +54,3 @@ chapters:
             slug: ssi-verifier
             description: This lesson introduces you to the concept of SSI Verifier
             path: 01_ssi/04_SSI_VERIFIER.mdx
-
-    - title: Getting Started
-      slug: getting-started
-      description: This chapter helps you get started with SSI
-      lessons: []
-      # lessons:
-      #     - title: Setting up your SSI wallet
-      #       description: This lesson helps you set up your SSI wallet
-      #       path: 02_getting_started/01_SSI_WALLET.mdx
-      #     - title: Creating your first credential
-      #       description: This lesson helps you create your first credential
-      #       path: 02_getting_started/02_CREATE_CREDENTIAL.mdx
